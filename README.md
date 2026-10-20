@@ -25,6 +25,8 @@ fetches the pages behind the top results to extract their main content.
 
 ## Install
 
+Local development:
+
 ```bash
 npm install
 npm run build
@@ -48,6 +50,17 @@ Optionally link it globally:
 npm link
 web-search "typescript generics"
 ```
+
+### Install from GitHub
+
+```bash
+npm install -g --install-links github:gogilo2003/web-search
+```
+
+`--install-links` is required. Without it npm links the global install to a
+temporary directory inside its own cache, which is later deleted, leaving a
+`web-search` command that fails to run. The built `dist/` is committed to the
+repository, so no build step runs during installation.
 
 ## Getting help
 
