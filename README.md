@@ -1,4 +1,4 @@
-# ddg-web-search
+# web-search
 
 A TypeScript web search tool that queries DuckDuckGo, organises the results, and
 fetches the pages behind the top results to extract their main content.
@@ -46,7 +46,7 @@ Optionally link it globally:
 
 ```bash
 npm link
-ddg-search "typescript generics"
+web-search "typescript generics"
 ```
 
 ## Getting help
@@ -63,7 +63,7 @@ flag before running the script. Pass flags after `--`, as in
 ## CLI usage
 
 ```text
-ddg-search [options] <query>
+web-search [options] <query>
 
 Options:
   -n, --results <n>      Number of search results to return (default: 10, max: 50)
@@ -83,13 +83,13 @@ Options:
 Examples:
 
 ```bash
-ddg-search "how does duckduckgo work"
-ddg-search -n 20 -f 10 "node.js streams"
-ddg-search -n 10 --no-follow-links "search only"
-ddg-search --save "node.js streams"
-ddg-search -s -o ./output --raw-html "typescript decorators"
-ddg-search --json "typescript decorators" > results.json
-ddg-search -f 0 "search results only"
+web-search "how does duckduckgo work"
+web-search -n 20 -f 10 "node.js streams"
+web-search -n 10 --no-follow-links "search only"
+web-search --save "node.js streams"
+web-search -s -o ./output --raw-html "typescript decorators"
+web-search --json "typescript decorators" > results.json
+web-search -f 0 "search results only"
 
 # Through npm (flags must come after --)
 npm start -- -n 10 --no-follow-links "search only"
@@ -140,7 +140,7 @@ console.log(report.storage?.pages);
 ## Library usage
 
 ```ts
-import { runSearchReport, search, fetchPageDetails } from "ddg-web-search";
+import { runSearchReport, search, fetchPageDetails } from "web-search";
 
 const report = await runSearchReport("typescript generics", {
   limit: 10,

@@ -8,7 +8,7 @@ import { DEFAULT_STORE_DIR } from "./store.js";
 const require = createRequire(import.meta.url);
 const pkg = require("../package.json") as { version?: string };
 
-const HELP = `Usage: ddg-search [options] <query>
+const HELP = `Usage: web-search [options] <query>
 
 Search DuckDuckGo, then optionally follow the top results and extract their
 content.
@@ -32,12 +32,12 @@ Link following:
   many are followed, or --no-follow-links (same as -f 0) to stop after search.
 
 Examples:
-  ddg-search "typescript generics"
-  ddg-search -n 20 -f 10 "node.js streams"
-  ddg-search -n 10 --no-follow-links "search only"
-  ddg-search -s "rust ownership"
-  ddg-search -s -o ./output --raw-html "typescript decorators"
-  ddg-search --json "duckduckgo api" > results.json
+  web-search "typescript generics"
+  web-search -n 20 -f 10 "node.js streams"
+  web-search -n 10 --no-follow-links "search only"
+  web-search -s "rust ownership"
+  web-search -s -o ./output --raw-html "typescript decorators"
+  web-search --json "duckduckgo api" > results.json
 
 Using npm scripts:
   npm run help

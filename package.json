@@ -23,6 +23,7 @@
   "scripts": {
     "dev": "tsx src/cli.ts",
     "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
     "start": "node dist/cli.js",
     "help": "tsx src/cli.ts --help",
     "typecheck": "tsc -p tsconfig.json --noEmit"

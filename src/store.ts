@@ -173,7 +173,7 @@ export async function storeReport(
   );
 
   const manifest = {
-    tool: "ddg-web-search",
+    tool: "web-search",
     query: report.query,
     searchedAt: report.searchedAt,
     storedAt: new Date().toISOString(),
