@@ -1,5 +1,5 @@
 {
-  "name": "web-search",
+  "name": "@gogilo2003/web-search",
   "version": "1.0.0",
   "description": "TypeScript web search CLI built on DuckDuckGo with detailed extraction of the top results",
   "type": "module",
@@ -12,7 +12,7 @@
     }
   },
   "bin": {
-    "web-search": "./dist/cli.js"
+    "web-search": "dist/cli.js"
   },
   "files": [
     "dist"
